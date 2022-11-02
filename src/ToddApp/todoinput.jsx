@@ -6,14 +6,18 @@ const handleChange=(e)=>{
 
 }
 
-console.log(props.input)
+// console.log(props.input)
+
+
+
+
 
 
 
     return(
         <div>
         <input placeholder="Enter Item"  value={props.input} onChange={handleChange}/>
-        <button>Add Task</button>
+        <button onClick={props.TodoSubmit}>Add Task</button>
         </div>
     )
 }
