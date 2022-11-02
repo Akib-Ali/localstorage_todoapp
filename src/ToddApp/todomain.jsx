@@ -23,6 +23,21 @@ export const TodoMain=()=>{
     },[todo])
 
 
+     const handleDelete=(id)=>{
+        const updatedtodo = todo.filter((item,index)=>{
+
+            return id !== index
+      })
+      settodo(updatedtodo)
+
+
+
+     }
+
+
+    
+
+
     return(
 
         <div>
@@ -39,8 +54,10 @@ export const TodoMain=()=>{
         {todo.map((item,index)=>{
             return(
                 <TodoList key={index}
+                          id={index}
                            item={item}
                            index={index}
+                            handleDelete={handleDelete}
 
                 />
             )
